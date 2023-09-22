@@ -7,7 +7,7 @@ const App = () => {
     return (
         <div className="flex flex-col min-h-screen">
             <Header/>
-            <div className="grow">
+            <div className="grow flex justify-center">
                 <Outlet/>
             </div>
             <Footer/>
