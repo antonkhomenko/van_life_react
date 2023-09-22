@@ -8,3 +8,17 @@ body {
   margin: 0;
   padding: 0;
 }
+
+.activeLink {
+  color: #161616;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.inactiveLink {
+  color: #4D4D4D;
+  font-weight: 600;
+  font-size: 16px;
+}
+
