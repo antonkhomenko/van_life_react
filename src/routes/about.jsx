@@ -1,5 +1,6 @@
 import React from 'react';
 import bg from "/src/assets/about-bg.png";
+import {Link} from "react-router-dom";
 
 const About = () => {
     return (
@@ -21,9 +22,9 @@ const About = () => {
                         Your destination is waiting.<br/>
                         Your van is ready.
                     </h2>
-                    <button className="bg-black text-white font-bold text-[16px] px-[22px] py-[13px] border-transparent rounded-[10px]">
+                    <Link to="/vans" className="bg-black text-white font-bold text-[16px] px-[22px] py-[13px] border-transparent rounded-[10px]">
                         Explore our vans
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>
