@@ -23,3 +23,33 @@ body {
   font-size: 16px;
 }
 
+.price {
+  position: relative;
+}
+
+.price:after {
+  content: "/day";
+  font-size: 22px;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  color: #161616;
+  font-family: 'Arial', sans-serif;
+  font-weight: normal;
+}
+
+.luxury-btn {
+  @apply max-w-[150px] bg-[#161616] text-[#FFEAD0] text-center font-semibold py-[8px] border-transparent rounded-[5px] cursor-pointer capitalize;
+}
+
+.simple-btn {
+  @apply max-w-[150px] bg-[#E17654] text-[#FFEAD0] text-center font-semibold py-[8px] border-transparent rounded-[5px] cursor-pointer capitalize;
+}
+
+.rugged-btn {
+  @apply max-w-[150px] bg-[#115E59] text-[#FFEAD0] text-center font-semibold py-[8px] border-transparent rounded-[5px] cursor-pointer capitalize;
+}
+
+
+
+

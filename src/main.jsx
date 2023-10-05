@@ -8,7 +8,7 @@ import About from "./routes/about.jsx";
 import Vans from "./routes/vans.jsx";
 import Home from "./routes/home.jsx";
 import axios from "axios";
-
+import Van from "./routes/van.jsx";
 
 
 
@@ -30,6 +30,10 @@ const router = createBrowserRouter([
             {
                 path: "/vans",
                 element: <Vans/>,
+            },
+            {
+                path: "/vans/:id",
+                element: <Van/>
             },
             {
                 path: "*",
