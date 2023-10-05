@@ -1,23 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import VanItem from "../components/VanItem.jsx";
+import {useLoaderData} from "react-router-dom";
 
 
-const getVansData = async () => {
-    const resp = await axios.get("http://localhost:8080/vans/");
-    const data = await resp.data;
-    return data;
-}
 
 const Vans = () => {
-
-    const [vansData, setVansData] = useState([]);
+    const vansJson = useLoaderData();
+    const [vansData, setVansData] = useState(vansJson);
     const [filteres, setFilteres] = useState([]);
     const [filteredVansData, setFilteredVansData] = useState([]);
 
-    useEffect(() => {
-        getVansData().then(data => setVansData(data))
-    }, [])
 
     useEffect(() => {
         setFilteredVansData(vansData)
@@ -83,5 +76,11 @@ const Vans = () => {
         </div>
     );
 };
+
+export const vansLoader = async () => {
+    const resp = await axios.get("http://localhost:8080/vans/")
+    const data = await resp.data;
+    return data;
+}
 
 export default Vans;
